@@ -1,5 +1,11 @@
 # sparta-sinatra-videos
 
+### What went well:
+Using the rMVC way of creating page content.
+
+### Challenges
+Linking the stylesheet from the root directory location.
+
 ### Brief
 Your aim is to create a new resource of your choice for example *Posts* for a Blog site or *Cars* for a Transport site.
 
