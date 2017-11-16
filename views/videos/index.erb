@@ -1,2 +1,5 @@
 <h1><%= @heading %></h1>
-<p></p>
+<% @videos.each do |vid| %>
+      <h3> <a href="/videos/<%= vid[:id]%>"><%= vid[:title] %> </a></h3>
+      <%= vid[:source]  %>
+<% end %>

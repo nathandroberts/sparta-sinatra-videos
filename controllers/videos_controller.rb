@@ -9,19 +9,19 @@ class VideosController < Sinatra::Base
     id: 0,
     title: "First Video",
     body: "This is the first post",
-    source: ""
+    source: '<iframe width="560" height="315" src="https://www.youtube.com/embed/OmTUBLNFFAk" frameborder="0" allowfullscreen></iframe>'
   },
   {
     id: 1,
     title: "Second Video",
     body: "This is the second post",
-    source: ""
+    source: '<iframe width="560" height="315" src="https://www.youtube.com/embed/OKYAjFX5xy4" frameborder="0" allowfullscreen></iframe>'
   },
   {
     id: 2,
     title: "Third Video",
     body: "This is the third post",
-    source: ""
+    source: '<iframe width="560" height="315" src="https://www.youtube.com/embed/ci_PqoWEFik" frameborder="0" allowfullscreen></iframe>'
     }];
 
   get '/' do
@@ -31,7 +31,7 @@ class VideosController < Sinatra::Base
 
   get '/videos' do
     @heading = 'Video Page'
-    # @videos = $videos
+    @videos = $videos
     erb :'videos/index'
   end
 
@@ -44,9 +44,9 @@ class VideosController < Sinatra::Base
   end
 
   get '/videos/:id' do
-    # id = params[:id].to_i
-    # @photo = $videos[id]
-    # erb :'videos/show'
+    id = params[:id].to_i
+    @photo = $videos[id]
+    erb :'videos/show'
   end
   get '/videos/:id/edit' do
     # @paragraph = 'edit this photo'
