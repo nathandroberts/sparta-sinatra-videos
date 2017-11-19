@@ -1,5 +1,10 @@
-<h1><%= @video[:title] %></h1>
-<p><%= @video[:body] %></p>
-<%= @video[:source] %>
+<h1><%= @video.title %></h1>
+<p><%= @video.body %></p>
+<%= @video.source %>
+<a href="<%= @video.id %>/edit">edit</a>
+<form action="<%= @video.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" name="name" value="Delete">
+</form>
+
 <h3><%= @subheading %></h3>
-<p><%= @video[:comment] %></p>

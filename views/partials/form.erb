@@ -1,0 +1,25 @@
+<form action="/videos/<%= @video.id %>" method="POST">
+  <div>
+    <label>Channel name</label>
+    <input type="text" name="title" placeholder="Enter your channel name" value="<%= @video.title %>">
+  </div>
+  <div>
+    <label>Description</label>
+    <textarea name="body" rows="8" cols="40" placeholder="Enter video title/description"><%= @video.body %></textarea>
+  </div>
+  <div>
+    <label>Youtube embed</label>
+    <textarea name="body" rows="8" cols="40" placeholder="Paste embed html here"><%= @video.source %></textarea>
+  </div>
+  <div>
+    <label>Thumbnail image Link</label>
+    <textarea name="body" rows="8" cols="40" placeholder="Paste image link here"><%= @video.image %></textarea>
+  </div>
+  <div>
+    <input type="submit" value="Save Video">
+  </div>
+  <% if(@video.id) %>
+    <input type="hidden" name="_method" value="PUT">
+  <% end %>
+
+</form>

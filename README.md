@@ -5,6 +5,7 @@ Using the rMVC way of creating page content.
 
 ### Challenges
 Linking the stylesheet from the root directory location.
+SQL syntax, using '' instead of ""
 
 ### Brief
 Your aim is to create a new resource of your choice for example *Posts* for a Blog site or *Cars* for a Transport site.

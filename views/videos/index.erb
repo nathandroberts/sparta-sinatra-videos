@@ -1,5 +1,7 @@
 <h1><%= @heading %></h1>
 <% @videos.each do |vid| %>
-      <h3> <a href="/videos/<%= vid[:id]%>"><%= vid[:title] %> </a></h3>
-      <a href="/videos/<%= vid[:id]%>"><img class="thumbnail" src="<%= vid[:image] %>" alt="<%= vid[:body] %>"></a> 
+<div>
+  <h3> <a href="/videos/<%= vid.id%>"><%= vid.title %> </a></h3>
+  <a href="/videos/<%= vid.id%>"><img class="thumbnail" src="<%= vid.image %>" alt="<%= vid.body %>"></a>
+</div>
 <% end %>
