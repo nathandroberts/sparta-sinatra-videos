@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= @page %></title>
+    <!-- <link rel="stylesheet" href="<%= url('../styles/style.css') %>"> -->
+    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+  </head>
+  <body>
+    <%= erb(:'partials/navigation', :layout => false) %>
+    <%= erb(:'partials/logo', :layout => false) %>
+    <%= yield %>
+
+  </body>
+</html>
