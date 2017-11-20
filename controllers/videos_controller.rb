@@ -34,7 +34,7 @@ class VideosController < Sinatra::Base
     erb :'videos/show'
   end
 
-  post '/videos' do
+  post '/videos/' do
     video = Video.new
 
 
